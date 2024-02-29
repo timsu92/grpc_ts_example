@@ -17,7 +17,6 @@
 			"ppas": "",
 			"preserve_apt_list": false
 		}
-		// "ghcr.io/lumenpink/devcontainer-features/bun:0": {}
 	},
 	// Configure tool-specific properties.
 	"customizations": {
@@ -30,10 +29,10 @@
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [50051],
+	"onCreateCommand": "(sh scripts/install_protoc.sh) && npm install"
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "scripts/install_protoc.sh && bun install --frozen-lockfile"
-	"postCreateCommand": "(sh scripts/install_protoc.sh) && npm install"
+	// "postCreateCommand": "(sh scripts/install_protoc.sh) && npm install"
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
